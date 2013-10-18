@@ -1,6 +1,6 @@
 # Rodger
 
-TODO: Write a gem description
+Rodger is a Ruby interface to [John Wiegley's ledger-cli program](http://www.ledger-cli.org/)
 
 ## Installation
 
@@ -16,9 +16,18 @@ Or install it yourself as:
 
     $ gem install rodger
 
+### It is important to have the ledger-cli binary on your system.
+
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+
+@r = Rodger.new("accounts.cli")
+@r.accounts # A hash with the accounts in it
+@r.balance["Liabilities:Credit-Card:VISA"] # => The balance of a particular account
+```
+
+Check the specs for more usage examples
 
 ## Contributing
 
